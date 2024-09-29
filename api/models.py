@@ -14,5 +14,6 @@ class Item(models.Model):
     type = models.ForeignKey(Type, on_delete=models.CASCADE)
     number = models.IntegerField()
     lastDate = models.DateField()
+    image = models.TextField(default='http://example.com/default_image.png')
     def __str__(self):
         return self.name
